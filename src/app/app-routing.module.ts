@@ -5,6 +5,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { BlogComponent } from './blog/blog.component';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { BugTrackerComponent } from './bug-tracker/bug-tracker.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
 { path: 'contact', component: ContactComponent },
 { path: 'blog', component: BlogComponent },
 { path: 'about-me', component: AboutMeComponent },
+{ path: 'bug-tracker', component: BugTrackerComponent },
 ];
 
 @NgModule({
