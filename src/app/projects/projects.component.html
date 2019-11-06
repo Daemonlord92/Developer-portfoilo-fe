@@ -1,1 +1,30 @@
-<p>projects works!</p>
+<div class="album text-muted">
+	<div class="container">
+		<h1>Portfolio Items</h1>
+  	<div class="row">
+  		
+  		<div *ngFor="let project of projects" class="col-md-4">
+
+	    	<div class="card row" style="">
+	    
+	    		<p class="card-text">
+	    			{{project.portfolio_title}}
+	    		</p>
+	    		<p class="card-text">
+	    			{{project.tools}}
+	    		</p>
+	    		<img src="https://thumbs.dreamstime.com/z/website-menu-template-23529345.jpg" alt="img" style="max-width: 10rem; max-height: 10rem;">
+	    		<div>
+		    		<a target="_blank" href="{{project.github_url}}" class="btn btn-info card-text col-md-6" style="max-width: 5rem;">
+		    			Github Link
+		    		</a>
+		    		<a target="_blank" href="{{project.heroku_url}}" class="btn btn-info card-text col-md-6" style="max-width: 5rem;">
+		    			Heroku Link
+		    		</a>
+
+	    		</div>
+	    	</div>
+	    </div>	
+    </div>
+  </div>
+</div>
