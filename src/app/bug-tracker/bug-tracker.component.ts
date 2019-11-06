@@ -14,6 +14,7 @@ export class BugTrackerComponent {
 
 	bugs: Bug[] = [
 	this.bugOne,
+	this.bugTwo,
 	]
   
 

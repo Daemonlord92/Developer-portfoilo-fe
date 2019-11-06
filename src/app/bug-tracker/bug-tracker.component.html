@@ -1,9 +1,42 @@
-<h3>3JMCoding Bug Tracker</h3>
 
-<div *ngFor="let bug of bugs">
-	{{bug.id}} - {{bug.issue}}
-	<br>
-	{{bug.github_url}}
-	<br>
-	{{bug.tools}}
+<div class="container-fluid">
+	<h3 class="middle">3JMCoding Bug Tracker</h3>
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>
+							#
+						</th>
+						<th>
+							Issue
+						</th>
+						<th>
+							Tools Used
+						</th>
+						<th>
+							Github Url
+						</th>
+					</tr>
+				</thead>
+				<tbody *ngFor="let bug of bugs">
+					<tr>
+						<td>
+							{{bug.id}}
+						</td>
+						<td>
+							{{bug.issue}}
+						</td>
+						<td>
+							{{bug.tools}}
+						</td>
+						<td>
+							{{bug.github_url}}
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </div>

@@ -1,3 +1,14 @@
 .btn-blue{
 	color: #00ccff;
 }
+.middle{
+	display: flex;
+	justify-content: center;
+}
+.wwf{
+	white-space: nowrap;
+  width: 200px;
+  border: 1px solid #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
