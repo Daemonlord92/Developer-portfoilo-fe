@@ -10,11 +10,13 @@ import { BugTracker } from './bug-tracker';
 export class BugTrackerComponent {
 	bugOne: BugTracker = new BugTracker( 1, 'Creating test data to work with on bug-tracker', 'github.com/Daemonlord92/Developer-portfoilo-fe','Angular, Ruby on Rails' )
 	bugTwo: BugTracker = new BugTracker( 2, 'working on bootstrap design', 'github.com/Daemonlord92/Developer-portfoilo-fe','Angular, Ruby on Rails' )
+	bugThree: BugTracker = new BugTracker( 3, 'Begin to work on the homepage', 'github.com/Daemonlord92/Developer-portfoilo-fe','Angular, Ruby on Rails' )
 
 
 	bugs: Bug[] = [
 	this.bugOne,
 	this.bugTwo,
+	this.bugThree,
 	]
   
 
