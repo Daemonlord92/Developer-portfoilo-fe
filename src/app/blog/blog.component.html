@@ -1,1 +1,12 @@
-<p>blog works!</p>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let blog of blogs" class="card card-block col-md-6">
+      <h2 class="blog-post-title">
+        {{ blog.id }} - {{ blog.title }}
+      </h2>
+      <p>
+        {{ blog.body }}
+      </p>
+    </div>
+  </div>
+</div>

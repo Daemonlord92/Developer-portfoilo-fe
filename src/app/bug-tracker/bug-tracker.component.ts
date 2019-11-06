@@ -12,6 +12,7 @@ export class BugTrackerComponent {
 	bugTwo: BugTracker = new BugTracker( 2, 'working on bootstrap design', 'github.com/Daemonlord92/Developer-portfoilo-fe','Angular, Ruby on Rails' )
 	bugThree: BugTracker = new BugTracker( 3, 'Begin to work on the homepage', 'github.com/Daemonlord92/Developer-portfoilo-fe','Angular, Ruby on Rails' )
 	bugFour: BugTracker = new BugTracker( 4, 'Setup Project page and testing data', 'github.com/Daemonlord92/Developerportfoilo-fe', 'Angular, Ruby on Rails' )
+	bugFive: BugTracker = new BugTracker( 5, 'Setup blog page and testing', 'github.com/Daemonlord92/Developerportfoilo-fe', 'Angular, Ruby on Rails')
 
 
 	bugs: Bug[] = [
@@ -19,6 +20,7 @@ export class BugTrackerComponent {
 	this.bugTwo,
 	this.bugThree,
 	this.bugFour,
+	this.bugFive,
 	]
   
 
