@@ -1,6 +1,9 @@
 
 <div class="container-fluid">
 	<h3 class="middle">3JMCoding Bug Tracker</h3>
+	<div>
+		<a routerLink='/bug-tracker/new'>New Issue</a>
+	</div>
 	<div class="row">
 		<div class="col-md-12">
 			<table class="table">
@@ -20,19 +23,19 @@
 						</th>
 					</tr>
 				</thead>
-				<tbody *ngFor="let bug of bugs">
+				<tbody *ngFor="let bugtracker of bugs">
 					<tr>
 						<td>
-							{{bug.id}}
+							{{bugtracker.id}}
 						</td>
 						<td>
-							{{bug.issue}}
+							{{bugtracker.issue}}
 						</td>
 						<td>
-							{{bug.tools}}
+							{{bugtracker.tools}}
 						</td>
 						<td>
-							{{bug.github_url}}
+							{{bugtracker.github_url}}
 						</td>
 					</tr>
 				</tbody>

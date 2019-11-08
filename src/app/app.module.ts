@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { BugTrackerComponent } from './bug-tracker/bug-tracker.component';
+import { BugTrackerNewComponent } from './bug-tracker/bug-tracker-new.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { BugTrackerComponent } from './bug-tracker/bug-tracker.component';
     ProjectsComponent,
     ContactComponent,
     AboutMeComponent,
-    BugTrackerComponent
+    BugTrackerComponent,
+    BugTrackerNewComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

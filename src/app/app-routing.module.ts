@@ -6,6 +6,7 @@ import { ContactComponent } from './contact/contact.component';
 import { BlogComponent } from './blog/blog.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { BugTrackerComponent } from './bug-tracker/bug-tracker.component';
+import { BugTrackerNewComponent } from './bug-tracker/bug-tracker-new.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
 { path: 'blog', component: BlogComponent },
 { path: 'about-me', component: AboutMeComponent },
 { path: 'bug-tracker', component: BugTrackerComponent },
+{ path: 'bug-tracker/new', component: BugTrackerNewComponent },
 ];
 
 @NgModule({

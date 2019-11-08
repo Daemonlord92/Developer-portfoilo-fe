@@ -1,0 +1,56 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="jumbotron card card-block home-card" 
+			style="width: 28rem;
+							margin-right: auto;
+							margin-left: auto;
+							margin-top: auto;
+							margin-top:  10rem;
+							"
+							>
+				<form #bugTrackerForm="ngForm">
+					<div class="form-group">
+						<label for="bug_issue">Issue</label>
+						<input type="text"
+										id="bug_issue" 
+										name="bug_issue"
+										placeholder="Problem with software and what occured!"
+										required
+										#issue="ngModel"
+										[(ngModel)]="bug-tracker.bug_issue" 
+						 >
+					</div>
+
+					<div class="form-group">
+						<label for="github_url">Github Url</label>
+						<input type="text"
+										id="github_url" 
+										name="github_url"
+										placeholder="Github Url"
+										required
+										#github_url="ngModel"
+										[(ngModel)]="bug-tracker.github_url" 
+						>
+					</div>
+
+					<div class="form-group">
+					<label for="tools">Tools used on the project</label>
+					<input type="text"
+									id="tools"
+									placeholder="Ruby on Rails, Angular, etc"
+									required
+									name="tools"
+									#tools='ngModel'
+									[(ngModel)]="bug-tracker.tools"
+					>
+				</div>
+
+				<div class="form-group">
+					<input type="submit" class="btn btn-primary">
+				</div>
+				</form>	
+			</div>
+		</div>		
+	</div>
+</div>
