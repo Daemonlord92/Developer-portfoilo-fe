@@ -17,6 +17,7 @@ export class BugTrackerComponent {
 	bugSeven: BugTracker = new BugTracker( 7, 'Fixed a Compile error on the Bug[], changed to BugTracker[]', 'github.com/Daemonlord92/Developerportfoilo-fe', 'Angular, Ruby on Rails')
 	bugEight: BugTracker = new BugTracker( 8, 'Working on about me Page', 'github.com/Daemonlord92/Developerportfoilo-fe', 'Angular, Ruby on Rails')
 	bugNine: BugTracker = new BugTracker( 9, 'Adding a form to bug tracker to add bugs', 'github.com/Daemonlord92/Developerportfoilo-fe', 'Angular, Ruby on Rails')
+	bugTen: BugTracker = new BugTracker( 10, 'Create a form for BlogNewComponent and create BlogNewComponent', 'github.com/Daemonlord92/Developerportfoilo-fe', 'Angular, Ruby on Rails')
 
 
 	bugs: BugTracker[] = [
@@ -29,6 +30,7 @@ export class BugTrackerComponent {
 	this.bugSeven,
 	this.bugEight,
 	this.bugNine,
+	this.bugTen,
 	]
   
 
