@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { JwPaginationComponent } from 'jw-angular-pagination';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { BugTrackerNewComponent } from './bug-tracker/bug-tracker-new.component'
 @NgModule({
   declarations: [
     AppComponent,
+    JwPaginationComponent,
     HomepageComponent,
     BlogComponent,
     BlogNewComponent,
