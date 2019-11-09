@@ -13,6 +13,11 @@ export class BlogComponent {
 	blogFour: Blog = new Blog(4, 'Filler', 'Integer mattis ut ex id tempus. In eget ligula eget lorem faucibus lobortis. Maecenas interdum, lorem sit amet tempus placerat, augue risus lobortis metus, eget scelerisque nibh tortor sit amet justo. Nunc finibus auctor metus quis mollis. Nulla sed turpis mauris. Nulla aliquet ante a nisl ultricies, eu commodo nunc lacinia. Sed euismod arcu vitae leo fermentum, quis pretium neque ultrices. Donec lacus nisl, lobortis sed enim ac, vestibulum placerat leo.')
 	blogFive: Blog = new Blog(5, 'Filler', 'Sed fringilla porttitor dictum. Suspendisse in nisl eget mauris pharetra viverra vel in nibh. Cras bibendum leo at elementum rhoncus. Fusce vel aliquam sem, non ultrices sapien. Curabitur vitae orci nec orci rutrum porta. Proin pellentesque nibh quis posuere mollis. Maecenas id tortor vitae elit rhoncus dignissim.')
 	blogSix: Blog = new Blog(6, 'Filler', 'Integer id fringilla lectus. Nulla viverra eros non justo vestibulum, pellentesque tincidunt nisl lacinia. Integer interdum finibus orci ut euismod. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc ut accumsan augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.')
+	blogSeven: Blog = new Blog( 7, ' FIller', 'Integer id fringilla lectus. Nulla viverra eros non justo vestibulum, pellentesque tincidunt nisl lacinia. Integer interdum finibus orci ut euismod. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc ut accumsan augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.')
+	blogEight: Blog = new Blog( 8, 'Filler', 'Integer id fringilla lectus. Nulla viverra eros non justo vestibulum, pellentesque tincidunt nisl lacinia. Integer interdum finibus orci ut euismod. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc ut accumsan augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.')
+	blogNine: Blog = new Blog( 9, 'Filler', 'Integer id fringilla lectus. Nulla viverra eros non justo vestibulum, pellentesque tincidunt nisl lacinia. Integer interdum finibus orci ut euismod. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc ut accumsan augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.')
+	blogTen: Blog = new Blog( 10, 'Filler', 'Integer id fringilla lectus. Nulla viverra eros non justo vestibulum, pellentesque tincidunt nisl lacinia. Integer interdum finibus orci ut euismod. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc ut accumsan augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.')
+	blogEleven: Blog = new Blog( 11, 'Filler', 'Integer id fringilla lectus. Nulla viverra eros non justo vestibulum, pellentesque tincidunt nisl lacinia. Integer interdum finibus orci ut euismod. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc ut accumsan augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.')
 
 	blogs: Blog[] = [
 	this.blogOne,
@@ -21,5 +26,21 @@ export class BlogComponent {
 	this.blogFour,
 	this.blogFive,
 	this.blogSix,
+	this.blogSeven,
+	this.blogEight,
+	this.blogNine,
+	this.blogTen,
+	this.blogEleven,
 	]
+
+	items = this.blogs;
+	pageOfItems: Array<any>;
+
+  ngOnInit() {
+  	this.items = this.blogs;
+  }
+
+  onChangePage(pageOfItems: Array<any>) {
+  	this.pageOfItems = pageOfItems;
+  }
 }

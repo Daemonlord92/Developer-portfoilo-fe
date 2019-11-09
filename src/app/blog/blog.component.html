@@ -2,13 +2,14 @@
   <a routerLink="/blog/new">Create new blog post</a>
   <div class="row">
 
-    <div *ngFor="let blog of blogs" class="card card-block col-md-6">
+    <div *ngFor="let item of pageOfItems" class="">
       <h2 class="blog-post-title">
-        {{ blog.id }} - {{ blog.title }}
+        {{ item.id }} - {{ item.title }}
       </h2>
       <p>
-        {{ blog.body }}
+        {{ item.body }}
       </p>
     </div>
+    <jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
   </div>
 </div>

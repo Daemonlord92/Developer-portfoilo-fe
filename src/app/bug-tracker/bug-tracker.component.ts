@@ -30,6 +30,7 @@ export class BugTrackerComponent implements OnInit {
 	bugTen: BugTracker = new BugTracker( 10, 'Create a form for BlogNewComponent and create BlogNewComponent', 'github.com/Daemonlord92/Developerportfoilo-fe', 'Angular, Ruby on Rails')
 
 	bugEleven: BugTracker = new BugTracker( 11, 'Working on Pagination for BugTrackerComponent using jw-angular-pagination', 'github.com/Daemonlord92/Developerportfoilo-fe', 'Angular, Ruby on Rails')
+	bugTwelve: BugTracker = new BugTracker( 12, "Impletementing Pagination for blog post", "github.com/Daemonlord92/Developerportfoilo-fe", 'Angular, Ruby on Rails')
 
 	
 	bugs: BugTracker[] = [
@@ -44,6 +45,7 @@ export class BugTrackerComponent implements OnInit {
 	this.bugNine,
 	this.bugTen,
 	this.bugEleven,
+	this.bugTwelve,
 	]
 
   items = this.bugs;
