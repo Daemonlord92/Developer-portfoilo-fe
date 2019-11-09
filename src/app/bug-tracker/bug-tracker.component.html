@@ -23,24 +23,22 @@
 						</th>
 					</tr>
 				</thead>
-				<div *ngFor="let item of pageOfItems">
-					<tbody *ngFor="let bugtracker of bugs">
+					<tbody *ngFor="let item of pageOfItems">
 						<tr>
 							<td>
-								{{bugtracker.id}}
+								{{item.id}}
 							</td>
 							<td>
-								{{bugtracker.bug_issue}}
+								{{item.bug_issue}}
 							</td>
 							<td>
-								{{bugtracker.tools}}
+								{{item.tools}}
 							</td>
 							<td>
-								{{bugtracker.github_url}}
+								{{item.github_url}}
 							</td>
 						</tr>
 					</tbody>
-				</div>
 				<div>
 					<jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
 				</div>

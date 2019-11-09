@@ -20,6 +20,9 @@
 										#issue="ngModel"
 										[(ngModel)]="bug-tracker.bug_issue" 
 						 >
+						 <div [hidden]="issue.valid || issue.pristine">
+						 	Issue is required
+						 </div>
 					</div>
 
 					<div class="form-group">
@@ -32,6 +35,9 @@
 										#github_url="ngModel"
 										[(ngModel)]="bug-tracker.github_url" 
 						>
+						<div [hidden]="github_url.valid || github_url.pristine">
+						 	Github Url is required
+						</div>
 					</div>
 
 					<div class="form-group">
@@ -44,6 +50,9 @@
 									#tools='ngModel'
 									[(ngModel)]="bug-tracker.tools"
 					>
+					<div [hidden]="tools.valid || tools.pristine">
+						 	Tools is required
+					</div>
 				</div>
 
 				<div class="form-group row">
