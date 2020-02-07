@@ -4,38 +4,37 @@
 	<div>
 		<a routerLink='/bug-tracker/new'>New Issue</a>
 	</div>
-	<div class="row">
-		<div class="col-md-12">
-			<table class="table">
-				<thead>
+	<div class="">
+		<div class="">
+			<table class="table table-responsive">
+				<thead class="">
 					<tr>
-						<th>
-							#
-						</th>
-						<th>
+					
+						<th class="thirty">
 							Issue
 						</th>
-						<th>
+						<th class="ten">
 							Tools Used
 						</th>
-						<th>
+						<th class="github-url">
 							Github Url
 						</th>
 					</tr>
 				</thead>
-					<tbody *ngFor="let item of pageOfItems">
+					<tbody *ngFor="let item of pageOfItems" class="">
 						<tr>
-							<td>
-								{{item.id}}
-							</td>
-							<td>
+						
+							<td class="thirty">
 								{{item.bug_issue}}
 							</td>
-							<td>
+							<td class="ten">
 								{{item.tools}}
 							</td>
-							<td>
-								{{item.github_url}}
+							<td class="github-url">
+								<a href="{{item.github_url}}" target="_self">
+									{{item.github_url}}
+								</a>
+								
 							</td>
 						</tr>
 					</tbody>

@@ -1,1 +1,19 @@
+/* Body Code */
 
+body {
+	width: 1000px;
+}
+
+/* Header Code */
+
+@media (max-width: 500px) {
+	.navbar{
+		display: flex;
+		flex-direction: column;
+	}
+	.navbar a {
+		width: 100%;
+		padding-bottom: 10px;
+		border-bottom: 1px black solid;
+	}
+}
