@@ -1,22 +1,22 @@
 
 <div class="container-fluid">
-	<h3 class="middle">3JMCoding Bug Tracker</h3>
+	<h3 class="middle card">3JMCoding Bug Tracker</h3>
 	<div>
 		<a routerLink='/bug-tracker/new'>New Issue</a>
 	</div>
-	<div class="">
+	<div class="row card">
 		<div class="">
 			<table class="table table-responsive">
 				<thead class="">
 					<tr>
 					
-						<th class="thirty">
+						<th class="thirty" >
 							Issue
 						</th>
-						<th class="ten">
+						<th class="ten" >
 							Tools Used
 						</th>
-						<th class="github-url">
+						<th class="github-url" >
 							Github Url
 						</th>
 					</tr>
@@ -24,13 +24,13 @@
 					<tbody *ngFor="let item of pageOfItems" class="">
 						<tr>
 						
-							<td class="thirty">
+							<td class="thirty" >
 								{{item.bug_issue}}
 							</td>
-							<td class="ten">
+							<td class="ten" >
 								{{item.tools}}
 							</td>
-							<td class="github-url">
+							<td class="github-url" >
 								<a href="{{item.github_url}}" target="_self">
 									{{item.github_url}}
 								</a>

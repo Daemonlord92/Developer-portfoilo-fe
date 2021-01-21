@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-homepage',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private client:HttpClient) { }
 
   ngOnInit() {
+  	this.client.get('http://localhost:4000')
+  	.subscribe(response =>
+  	{
+  		console.log(response);
+  	}, err => {
+  		console.log('Api not called');
+  	}
+  	)
   }
 
 }

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { JwPaginationComponent } from 'jw-angular-pagination';
 
@@ -26,11 +27,13 @@ import { BugTrackerNewComponent } from './bug-tracker/bug-tracker-new.component'
     AboutMeComponent,
     BugTrackerComponent,
     BugTrackerNewComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
