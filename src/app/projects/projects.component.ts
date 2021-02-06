@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Project } from './project';
 
 @Component({
@@ -6,21 +7,41 @@ import { Project } from './project';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent {
-	projectOne: Project = new Project( 1, 'Excursion', 'https://github.com/Daemonlord92/excursion', 'https://daemonlord92.github.io/excursion/', 'HTML, CSS, Image', 'https://thumbs.dreamstime.com/z/business-solution-8384779.jpg')
-	projectTwo: Project = new Project( 2, 'Tesla Clone', 'https://github.com/Daemonlord92/bottega-tesla-clone', 'https://daemonlord92.github.io/bottega-tesla-clone/', 'Ruby, Ruby on Rails, Bootstrap, JavaScript', 'https://thumbs.dreamstime.com/z/business-solution-8384779.jpg')
-	projectThree: Project = new Project( 3, 'Developer Rails Project', 'https://github.com/Daemonlord92/bottega-EJM', 'https://ejm-developer.herokuapp.com/', 'Ruby, Ruby on Rails, Bootstrap, JavaScript', 'https://thumbs.dreamstime.com/z/business-solution-8384779.jpg')
-	projectFour: Project = new Project( 4, 'Developer Rails Project', 'https://github.com/Daemonlord92/bottega-EJM', 'https://ejm-developer.herokuapp.com/', 'Ruby, Ruby on Rails, Bootstrap, JavaScript', 'https://thumbs.dreamstime.com/z/business-solution-8384779.jpg')
-	projectFive: Project = new Project( 5, 'Developer Rails Project', 'https://github.com/Daemonlord92/bottega-EJM', 'https://ejm-developer.herokuapp.com/', 'Ruby, Ruby on Rails, Bootstrap, JavaScript', 'https://thumbs.dreamstime.com/z/business-solution-8384779.jpg')
-	projectSix: Project = new Project( 6, 'Developer Rails Project', 'https://github.com/Daemonlord92/bottega-EJM', 'https://ejm-developer.herokuapp.com/', 'Ruby, Ruby on Rails, Bootstrap, JavaScript', 'https://thumbs.dreamstime.com/z/business-solution-8384779.jpg')
+export class ProjectsComponent implements OnInit {
+	loading: boolean = false;
+	items;
+	errorMessage;
 
-	projects: Project[] = [
-	this.projectOne,
-	this.projectTwo,
-	this.projectThree,
-	this.projectFour,
-	this.projectFive,
-	this.projectSix,
-	]
+	constructor(private client:HttpClient) {}
+	public getProject() {
+		this.loading = true;
+		this.errorMessage = "";
+		this.client.get<any>('http://localhost:4000/api/project')
+			.subscribe(
+				(res) => {
+					console.log('response recevived', res)
+					this.items = res;
+					console.log(this.items)
+				},
+				(error) => {
+					console.error('Request failed with error')
+					this.errorMessage = error;
+					this.loading = false;
+				},
+				() => {
+					console.error('Request Completed')
+					this.loading = false;
+				})
+			
+	}
 
+	pageOfItems: Array<any>;
+
+  ngOnInit() {
+  	this.getProject();
+  }
+
+  onChangePage(pageOfItems: Array<any>) {
+  	this.pageOfItems = pageOfItems;
+  }
 }

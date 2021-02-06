@@ -14,7 +14,7 @@ export class BlogComponent implements OnInit {
 	errorMessage;
 
 	constructor(private client:HttpClient) {}
-	public getProject() {
+	public getBlog() {
 		this.loading = true;
 		this.errorMessage = "";
 		this.client.get<any>('http://localhost:4000/api/blog')
@@ -39,7 +39,7 @@ export class BlogComponent implements OnInit {
 	pageOfItems: Array<any>;
 
   ngOnInit() {
-  	this.getProject();
+  	this.getBlog();
   }
 
   onChangePage(pageOfItems: Array<any>) {
