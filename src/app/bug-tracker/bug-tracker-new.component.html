@@ -18,7 +18,7 @@
 										placeholder="Problem with software and what occured!"
 										required
 										#issue="ngModel"
-										[(ngModel)]="bug-tracker.bug_issue" 
+										[(ngModel)]="bugtracker.bug_issue" 
 						 >
 						 <div [hidden]="bug_issue.valid || bug_issue.pristine">
 						 	Issue is required
@@ -33,7 +33,7 @@
 										placeholder="Github Url"
 										required
 										#github_url="ngModel"
-										[(ngModel)]="bug-tracker.github_url" 
+										[(ngModel)]="bugtracker.github_url" 
 						>
 						<div [hidden]="github_url.valid || github_url.pristine">
 						 	Github Url is required
@@ -48,7 +48,7 @@
 									required
 									name="tools"
 									#tools='ngModel'
-									[(ngModel)]="bug-tracker.tools"
+									[(ngModel)]="bugtracker.tools"
 					>
 					<div [hidden]="tools.valid || tools.pristine">
 						 	Tools is required
@@ -57,7 +57,7 @@
 
 				<div class="form-group row">
 					<div class="col-md-6" align="center">
-						<input type="submit" class="btn btn-primary">
+						<input type="submit" (click)="postBugIssue()" class="btn btn-primary">
 					</div>
 					
 					<div class="col-md-6" align="center">
