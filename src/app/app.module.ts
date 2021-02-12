@@ -10,6 +10,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { BlogComponent } from './blog/blog.component';
 import { BlogNewComponent } from './blog/blog-new.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ProjectsNewComponent } from './projects/projects-new.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { BugTrackerComponent } from './bug-tracker/bug-tracker.component';
@@ -23,6 +24,7 @@ import { BugTrackerNewComponent } from './bug-tracker/bug-tracker-new.component'
     BlogComponent,
     BlogNewComponent,
     ProjectsComponent,
+    ProjectsNewComponent,
     ContactComponent,
     AboutMeComponent,
     BugTrackerComponent,

@@ -20,13 +20,13 @@
 										#issue="ngModel"
 										[(ngModel)]="bugtracker.bug_issue" 
 						 >
-						 <div [hidden]="bug_issue.valid || bug_issue.pristine">
+						<!--  <div [hidden]="bug_issue.valid || bug_issue.pristine">
 						 	Issue is required
-						 </div>
+						 </div> -->
 					</div>
 
 					<div class="form-group">
-						<label for="github_url">Github Url</label>
+						<label for="github_url">Github URL</label>
 						<input type="text"
 										id="github_url" 
 										name="github_url"
@@ -35,9 +35,9 @@
 										#github_url="ngModel"
 										[(ngModel)]="bugtracker.github_url" 
 						>
-						<div [hidden]="github_url.valid || github_url.pristine">
+						<!-- <div [hidden]="github_url.valid || github_url.pristine">
 						 	Github Url is required
-						</div>
+						</div> -->
 					</div>
 
 					<div class="form-group">
@@ -50,14 +50,14 @@
 									#tools='ngModel'
 									[(ngModel)]="bugtracker.tools"
 					>
-					<div [hidden]="tools.valid || tools.pristine">
+					<!-- <div [hidden]="tools.valid || tools.pristine">
 						 	Tools is required
-					</div>
+					</div> -->
 				</div>
 
 				<div class="form-group row">
 					<div class="col-md-6" align="center">
-						<input type="submit" (click)="postBugIssue()" class="btn btn-primary">
+						<input type="submit" (click)="postBugIssue()" class="btn btn-primary" routerLink="/bug-tracker">
 					</div>
 					
 					<div class="col-md-6" align="center">
